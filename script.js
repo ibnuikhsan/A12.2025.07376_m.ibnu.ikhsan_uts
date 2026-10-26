@@ -5,12 +5,12 @@ const VOUCHER = { STATIC10: 0.10 };    // kode voucher : persen diskon
 
 /* Daftar produk. Foto: simpan di assets/images/ lalu ganti nama file di "gambar". */
 const PRODUK = [
-  { id: 1, nama: "Bootleg T-Shirt",     kat: "atasan",  harga: 150000, diskon: 60, stok: 78, gambar: "assets/images/produk-1.jpg" },
-  { id: 2, nama: "Butterfly Crop Top",      kat: "atasan",  harga: 130000, diskon: 55, stok: 45, gambar: "assets/images/produk-2.jpg" },
-  { id: 3, nama: "Parachute Cargo Pants",   kat: "bawahan", harga: 280000, diskon: 70, stok: 30, gambar: "assets/images/produk-3.jpg" },
-  { id: 4, nama: "Pleated Mini Skirt",      kat: "bawahan", harga: 175000, diskon: 50, stok: 62, gambar: "assets/images/produk-4.jpg" },
-  { id: 5, nama: "Chrome Zip Hoodie",       kat: "outer",   harga: 320000, diskon: 65, stok: 25, gambar: "assets/images/produk-5.jpg" },
-  { id: 6, nama: "Starlight Denim Jacket",  kat: "outer",   harga: 350000, diskon: 70, stok: 18, gambar: "assets/images/produk-6.jpg" }
+  { id: 1, nama: "Bootleg T-Shirt",     kat: "atasan",  harga: 150000, diskon: 60, stok: 78, gambar: "produk-1.jpg" },
+  { id: 2, nama: "Butterfly Crop Top",      kat: "atasan",  harga: 130000, diskon: 55, stok: 45, gambar: "produk-2.jpg" },
+  { id: 3, nama: "Parachute Cargo Pants",   kat: "bawahan", harga: 280000, diskon: 70, stok: 30, gambar: "produk-3.jpg" },
+  { id: 4, nama: "Pleated Mini Skirt",      kat: "bawahan", harga: 175000, diskon: 50, stok: 62, gambar: "produk-4.jpg" },
+  { id: 5, nama: "Chrome Zip Hoodie",       kat: "outer",   harga: 320000, diskon: 65, stok: 25, gambar: "produk-5.jpg" },
+  { id: 6, nama: "Starlight Denim Jacket",  kat: "outer",   harga: 350000, diskon: 70, stok: 18, gambar: "produk-6.jpg" }
 ];
 const UKURAN = ["S", "M", "L", "XL"];
 
