@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>staticbloom | Diskon Besar-besaran Y2K</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="topbar">
+    <a href="#beranda" class="logo">static<span>bloom</span> ✿</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#voucher">Voucher</a>
+      <a href="#tentang">Tentang</a>
+    </nav>
+    <div class="tools">
+      <button class="chip" id="themeBtn" aria-label="Ganti tema">🌙 Mode Malam</button>
+      <button class="chip chip-cart" id="cartBtn" aria-label="Buka keranjang">🛍 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="beranda">
+      <div class="window">
+        <div class="window-bar"><span>staticbloom.exe</span><span class="dots">_ □ ✕</span></div>
+        <div class="window-body">
+          <p class="badge">MEGA SALE • s/d 70% OFF</p>
+          <h1>Tampil <em>glow</em> ala Y2K, harga bikin kaget.</h1>
+          <p class="lead">Baju brand lokal buatan sendiri. Stok terbatas, diskon berakhir saat timer habis.</p>
+          <div class="countdown" id="countdown" aria-live="polite">
+            <div><b id="cdH">00</b><small>Jam</small></div>
+            <div><b id="cdM">00</b><small>Menit</small></div>
+            <div><b id="cdS">00</b><small>Detik</small></div>
+          </div>
+          <a href="#produk" class="btn">Belanja sekarang</a>
+        </div>
+      </div>
+      <!-- GANTI FOTO HERO: taruh file di assets/images/hero.jpg -->
+      <img class="hero-img" src="assets/images/hero.jpg" alt="Model memakai koleksi staticbloom">
+    </section>
+
+    <div class="marquee" aria-hidden="true"><p>★ DISKON 70% ★ GRATIS ONGKIR ★ LIMITED STOCK ★ KODE: STATIC10 ★ DISKON 70% ★ GRATIS ONGKIR ★ LIMITED STOCK ★ KODE: STATIC10</p></div>
+
+    <!-- ================= PRODUK ================= -->
+    <section class="section" id="produk">
+      <h2>Koleksi diskon besar</h2>
+      <div class="toolbar">
+        <div class="filters" id="filters">
+          <button class="chip active" data-kat="semua">Semua</button>
+          <button class="chip" data-kat="atasan">Atasan</button>
+          <button class="chip" data-kat="bawahan">Bawahan</button>
+          <button class="chip" data-kat="outer">Outer</button>
+        </div>
+        <label class="search">🔍 <input type="search" id="search" placeholder="Cari produk..."></label>
+      </div>
+      <div class="grid" id="productGrid"></div>
+      <p class="empty" id="empty" hidden>Produk tidak ditemukan. Coba kata kunci lain atau pilih kategori Semua.</p>
+    </section>
+
+    <!-- ================= VOUCHER ================= -->
+    <section class="section voucher" id="voucher">
+      <h2>Tambahan diskon 10%</h2>
+      <p>Masukkan kode <b>STATIC10</b> di keranjang. Diskon langsung terpotong dari total belanja.</p>
+      <button class="btn" id="copyVoucher">Salin kode STATIC10</button>
+    </section>
+
+    <!-- ================= TENTANG ================= -->
+    <section class="section about" id="tentang">
+      <!-- GANTI FOTO PROFIL: taruh file di assets/images/profil.jpg -->
+      <img class="avatar" src="assets/images/profil.jpg" alt="Foto pemilik staticbloom">
+      <div>
+        <h2>Halo, kami staticbloom</h2>
+        <p>Brand fashion Y2K yang dibuat dan dijahit sendiri oleh pemiliknya. Setiap desain dibuat terbatas supaya gayamu tetap unik.</p>
+        <ul class="perks">
+          <li>✔ Bahan adem dan nyaman</li>
+          <li>✔ Tukar ukuran gratis</li>
+          <li>✔ Dikirim ke seluruh Indonesia</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <p>© 2026 staticbloom. Dibuat untuk UTS Pemrograman Web Dasar.</p>
+    <p>Instagram: @staticbloom • WhatsApp: 081542300985</p>
+  </footer>
+
+  <!-- ================= KERANJANG ================= -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Keranjang belanja">
+    <div class="drawer-head"><h3>Keranjang</h3><button class="chip" id="closeCart" aria-label="Tutup keranjang">✕</button></div>
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="drawer-foot">
+      <div class="coupon">
+        <input type="text" id="couponInput" placeholder="Kode voucher">
+        <button class="chip" id="couponBtn">Pakai</button>
+      </div>
+      <p class="coupon-msg" id="couponMsg"></p>
+      <div class="row"><span>Subtotal</span><span id="subtotal">Rp0</span></div>
+      <div class="row"><span>Voucher</span><span id="potongan">-Rp0</span></div>
+      <div class="row total"><span>Total</span><span id="total">Rp0</span></div>
+      <button class="btn full" id="checkoutBtn">Pesan via WhatsApp</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas" hidden>↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
