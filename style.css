@@ -124,3 +124,65 @@ body.dark .footer{background:#0b0518}
   .toolbar{flex-direction:column}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* ===== Formulir Pendataan (Modifikasi Bootstrap) ===== */
+#formulir .container {
+  background: var(--card) !important;
+  border: 3px solid var(--ink) !important;
+  border-radius: 14px !important;
+  box-shadow: 8px 8px 0 var(--lilac) !important;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+#formulir h2, 
+#formulir label, 
+#formulir .form-check-label {
+  color: var(--ink) !important;
+  font-weight: 700;
+}
+
+#formulir .form-control, 
+#formulir .form-select {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  color: var(--ink);
+  font-family: inherit;
+}
+
+#formulir .form-control:focus, 
+#formulir .form-select:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(255, 111, 216, 0.4);
+  background: var(--card);
+}
+
+#formulir .form-check-input {
+  border: 2px solid var(--ink);
+  background-color: var(--paper);
+}
+
+#formulir .form-check-input:checked {
+  background-color: var(--pink);
+  border-color: var(--ink);
+}
+
+#formulir .btn-primary {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: 3px solid var(--ink) !important;
+  border-radius: 999px !important;
+  background: linear-gradient(180deg, #ffb3ec, var(--pink)) !important;
+  color: #1c1033 !important;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--ink) !important;
+  transition: transform .15s, box-shadow .15s;
+}
+
+#formulir .btn-primary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink) !important;
+}
