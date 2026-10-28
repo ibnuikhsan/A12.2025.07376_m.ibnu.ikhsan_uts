@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>staticbloom | Diskon Besar-besaran Y2K</title>
+  
+  <!-- Tautan Bootstrap (Wajib agar form rapi) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,8 +44,7 @@
           <a href="#produk" class="btn">Belanja sekarang</a>
         </div>
       </div>
-      <!-- GANTI FOTO HERO: taruh file di assets/images/hero.jpg -->
-      <img class="hero-img" src="hero.jpg" alt="Model memakai koleksi staticbloom">
+      <img class="hero-img" src="assets/images/hero.jpg" alt="Model memakai koleksi staticbloom">
     </section>
 
     <div class="marquee" aria-hidden="true"><p>★ DISKON 70% ★ GRATIS ONGKIR ★ LIMITED STOCK ★ KODE: STATIC10 ★ DISKON 70% ★ GRATIS ONGKIR ★ LIMITED STOCK ★ KODE: STATIC10</p></div>
@@ -72,8 +74,7 @@
 
     <!-- ================= TENTANG ================= -->
     <section class="section about" id="tentang">
-      <!-- GANTI FOTO PROFIL: taruh file di assets/images/profil.jpg -->
-      <img class="avatar" src="profil.jpg" alt="Foto pemilik staticbloom">
+      <img class="avatar" src="assets/images/profil.jpg" alt="Foto pemilik staticbloom">
       <div>
         <h2>Halo, kami staticbloom</h2>
         <p>Brand fashion Y2K yang dibuat dan dijahit sendiri oleh pemiliknya. Setiap desain dibuat terbatas supaya gayamu tetap unik.</p>
@@ -84,11 +85,66 @@
         </ul>
       </div>
     </section>
+
+    <!-- ================= FORMULIR PENDATAAN ================= -->
+    <section class="section" id="formulir">
+      <div class="container mt-4 mb-5 p-4" id="formContainer">
+        <h2 class="mb-4">Formulir Pendataan Pelanggan</h2>
+        <form>
+          <div class="mb-3">
+            <label for="namaLengkap" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan nama Anda">
+          </div>
+
+          <div class="mb-3">
+            <label for="alamatLengkap" class="form-label">Alamat</label>
+            <textarea class="form-control" id="alamatLengkap" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="pilihanKota" class="form-label">Kota</label>
+            <select class="form-select" id="pilihanKota">
+              <option selected disabled>Pilih Kota...</option>
+              <option value="Semarang">Semarang</option>
+              <option value="Kudus">Kudus</option>
+              <option value="Demak">Demak</option>
+              <option value="Pekalongan">Pekalongan</option>
+              <option value="Tegal">Tegal</option>
+              <option value="Surabaya">Surabaya</option>
+              <option value="Jakarta">Jakarta</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label d-block">Hobi</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="hobiMembaca" value="Membaca">
+              <label class="form-check-label" for="hobiMembaca">Membaca</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="hobiKoding" value="Koding">
+              <label class="form-check-label" for="hobiKoding">Koding</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="hobiBerenang" value="Berenang">
+              <label class="form-check-label" for="hobiBerenang">Berenang</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="hobiMenggambar" value="Menggambar">
+              <label class="form-check-label" for="hobiMenggambar">Menggambar</label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Kirim Data</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <p>© 2026 staticbloom. Dibuat untuk UTS Pemrograman Web Dasar.</p>
+    <p>Nama: Sofia Chayatie | NIM: A11.2025.16234</p>
     <p>Instagram: @staticbloom • WhatsApp: 081542300985</p>
   </footer>
 
